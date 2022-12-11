@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Yishak| Sunnyside.com</title>
+    <!--stylesheet-->
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--header section-->
+    <header>
+      <!--nav bar-->
+      <nav id="nav">
+        <div class="nav-wrapper">
+          <img src="/images/logo.svg" alt="logo" />
+          <div class="nav__list">
+            <ul class="nav__list--wrapper">
+              <li class="nav__list--link"><a href="#about">about</a></li>
+              <li class="nav__list--link"><a href="#services">services</a></li>
+              <li class="nav__list--link"><a href="#project">project</a></li>
+            </ul>
+            <div class="btn-wrapper">
+              <button class="btn btn-contact" type="button">
+                <samp> contact </samp>
+              </button>
+            </div>
+          </div>
+          <div class="menu-bar">
+            <i class="fa-solid fa-bars"></i>
+            <!--mobile version menu-->
+            <div class="nav-card">
+              <div class="nav__list">
+            <ul class="nav__list--wrapper">
+              <li class="nav__list--link"><a href="#about">about</a></li>
+              <li class="nav__list--link"><a href="#services">services</a></li>
+              <li class="nav__list--link"><a href="#project">project</a></li>
+            </ul>
+            <div class="btn-wrapper">
+              <button class="btn btn-contact" type="button">
+                <samp> contact </samp>
+              </button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!--ende of nav bar-->
+
+      <section class="hero-section">
+        <h1>we are creatives</h1>
+        <img src="/images/icon-arrow-down.svg" alt="arrow down" />
+      </section>
+    </header>
+
+    <!--main section-->
+    <main >
+      <section class="main-section" id="project">
+        <!--start of single grid  -->
+        <div class="main-section__grid">
+          <div class="main-section__grid__text">
+            <h2 class="main-section__grid__header">Transform your brand</h2>
+            <p class="main-section__grid__paragraph">
+              We are a full-service creative agency specializing in helping
+              brands grow fast. Engage your clients through compelling visuals
+              that do most of the marketing for you.
+            </p>
+            <button class="btn btn-learn"><samp> learn more</samp></button>
+          </div>
+
+          <div class="main-section__grid__image">
+            <picture>
+              <source
+                srcset="
+                  /images/mobile/image-transform.jpg      750w,
+                  /images/desktop/image-transform-pc.jpg 1300w
+                "
+              />
+              <img src="/images/mobile/image-transform.jpg" alt="egg" />
+            </picture>
+          </div>
+        </div>
+        <!--end of single grid  -->
+
+        <!--start of single grid  -->
+        <div class="main-section__grid">
+          <div class="main-section__grid__text text-standout">
+            <h2 class="main-section__grid__header">
+              Stand out to the right audience
+            </h2>
+            <p class="main-section__grid__paragraph">
+              Using a collaborative formula of designers, researchers,
+              photographers, videographers, and copywriters, we’ll build and
+              extend your brand in digital places.
+            </p>
+            <button class="btn btn-learn"><samp> learn more</samp></button>
+          </div>
+
+          <div class="main-section__grid__image">
+            <picture>
+              <source
+                srcset="
+                  /images/mobile/image-stand-out.jpg      750w,
+                  /images/desktop/image-stand-out-pc.jpg 1300w
+                "
+              />
+              <img
+                src="/images/mobile/image-stand-out.jpg"
+                alt="image-stand-out"
+              />
+            </picture>
+          </div>
+        </div>
+        <!--end of single grid  -->
+
+        <!--start of single grid  -->
+        <div class="main-section__grid main-section__poster">
+          <div class="main-section__poster__graphic">
+            <div class="main-section__grid__text">
+              <h2 class="main-section__grid__header">Graphic design</h2>
+              <p class="main-section__grid__paragraph">
+                Great design makes you memorable. We deliver artwork that
+                underscores your brand message and captures potential clients’
+                attention.
+              </p>
+            </div>
+          </div>
+
+          <div class="main-section__poster__photography">
+            <div class="main-section__grid__text">
+              <h2 class="main-section__grid__header">Photography</h2>
+              <p class="main-section__grid__paragraph">
+                Increase your credibility by getting the most stunning,
+                high-quality photos that improve your business image.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--end of single grid  -->
+      </section>
+    </main>
+
+    <!--testimonial section-->
+    <section class="testimonial-section" id="about">
+      <h3 class="testimonial-section__header">Client testimonials</h3>
+      <div class="testimonial-article__wrapper">
+        <!--start of single article-->
+        <article class="tesimonial-article">
+          <img src="/images/image-emily.jpg" alt="person-img" />
+          <p class="tesimonial-article__paragraph">
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+          <h4 class="tesimonial-article__name">Emily R.</h4>
+          <span class="tesimonial-article__job"> Marketing Director</span>
+        </article>
+        <!--start of single article-->
+
+        <!--start of single article-->
+        <article class="tesimonial-article">
+          <img src="/images/image-thomas.jpg" alt="person-img" />
+          <p class="tesimonial-article__paragraph">
+            Sunnyside’s enthusiasm coupled with their keen interest in our
+            brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <h4 class="tesimonial-article__name">Thomas S.</h4>
+          <span class="tesimonial-article__job"> Chief Operating Officer</span>
+        </article>
+        <!--start of single article-->
+
+        <!--start of single article-->
+        <article class="tesimonial-article">
+          <img src="/images/image-jennie.jpg" alt="person-img" />
+          <p class="tesimonial-article__paragraph">
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
+          <h4 class="tesimonial-article__name">Jennie F.</h4>
+          <span class="tesimonial-article__job"> Business Owner</span>
+        </article>
+        <!--start of single article-->
+      </div>
+    </section>
+
+    <section class="products-section" id="services">
+      <!--start of single image -->
+      <picture class="products-section__image">
+        <source
+          srcset="
+            /images/mobile/image-gallery-milkbottles.jpg      750w,
+            /images/desktop/image-gallery-milkbottles-pc.jpg 1500w
+          "
+        />
+        <img
+          src="/images/mobile/image-gallery-milkbottles.jpg"
+          alt="milk-bottle"
+        />
+      </picture>
+      <!--end of single image-->
+      <!--start of single image -->
+      <picture class="products-section__image">
+        <source
+          srcset="
+            /images/mobile/image-gallery-orange.jpg      750w,
+            /images/desktop/image-gallery-orange-pc.jpg 1500w
+          "
+        />
+        <img src="/images/mobile/image-gallery-orange.jpg" alt="orange" />
+      </picture>
+      <!--end of single image-->
+      <!--start of single image -->
+      <picture class="products-section__image">
+        <source
+          srcset="
+            /images/mobile/image-gallery-cone.jpg      750w,
+            /images/desktop/image-gallery-cone-pc.jpg 1500w
+          "
+        />
+        <img src="/images/mobile/image-gallery-cone.jpg" alt="cone" />
+      </picture>
+      <!--end of single image-->
+      <!--start of single image -->
+      <picture class="products-section__image">
+        <source
+          srcset="
+            /images/mobile/image-gallery-sugar-cubes.jpg     750w,
+            /images/desktop/image-gallery-sugarcubes-pc.jpg 1500w
+          "
+        />
+        <img
+          src="/images/mobile/image-gallery-sugar-cubes.jpg"
+          alt="sugar-cubes"
+        />
+      </picture>
+      <!--end of single image-->
+    </section>
+
+    <!--footer -->
+    <footer>
+      <section class="footer-section">
+        <img src="/images/logo - footer.svg" alt="logo" />
+        <div class="footer-section__links">
+          <ul class="footer-links-container">
+            <li class="footer-links__link"><a href="#about">About</a></li>
+            <li class="footer-links__link"><a href="#services">Services</a></li>
+            <li class="footer-links__link">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="footer-links__link"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section__social__icons">
+        <a href="https://github.com/yishak621" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>  
+          <a href="https://github.com/yishak621" target="_blank"> <i class="fa-brands fa-instagram"></i></a> 
+          <a href="https://github.com/yishak621" target="_blank"><i class="fa-brands fa-twitter"></i></a>  
+          <a href="https://github.com/yishak621" target="_blank"><i class="fa-brands fa-pinterest"></i></a>  
+        </div>
+      </section>
+    </footer>
+    <!--pre loader gif-->
+<div class="loading-gif">
+  <div class="loading-gif__wrapper">
+<h1>please wait...</h1>
+  <img src="/images/load.gif" alt="loading">
+  </div>
+</div>
+<!--page navigation top link-->
+<button class="top-link"><a href="#"><i class="fa-solid fa-chevron-up"></i> </a></button>
+    <!--script-->
+    <script src="/script.js"></script>
+  </body>
+</html>

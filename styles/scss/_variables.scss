@@ -1,0 +1,42 @@
+/*Design colors*/
+//primary colors
+$Soft_red: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$Dark_desaturated_cyan: hsl(167, 40%, 24%); //(graphic design text)
+$Dark_blue: hsl(198, 62%, 26%); // (photography text)
+$Dark_moderate_cyan: hsl(168, 34%, 41%); //(footer)
+$btn_hover_color: rgb(101, 227, 217);
+//### Neutral
+
+$Very_dark_desaturated_blue: hsl(212, 27%, 19%);
+$Very_dark_grayish_blue: hsl(213, 9%, 39%);
+$Dark_grayish_blue: hsl(232, 10%, 55%);
+$Grayish_blue: hsl(210, 4%, 67%);
+$White: hsl(0, 0%, 100%);
+
+/* rest of the colors */
+$black: #222;
+$white: #fff;
+$red-light: #f8d7da;
+$red-dark: #842029;
+$green-light: #d1e7dd;
+$green-dark: #0f5132;
+
+/* fonts  */
+$small-text: 0.875rem;
+$extra-small-text: 0.7em;
+$font-para: 1.4rem;
+/* rest of the vars */
+$borderRadius: 0.25rem;
+$letterSpacing: 3px;
+$transition: 0.3s ease-in-out all;
+$max-width: 1378px;
+$fixed-width: 600px;
+
+/* box shadow-h-offset v-offset blur spread color*/
+$shadow-1: 0 1px 20px 7px rgba(0, 0, 0, 0.1);
+$shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+  0 10px 10px -5px rgba(0, 0, 0, 0.04);

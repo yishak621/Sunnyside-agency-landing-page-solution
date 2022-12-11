@@ -1,0 +1,382 @@
+//Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+//import
+@import './scss/variables';
+/*ANIMATIONS*/
+@keyframes pop {
+  from {
+    transform: scale(0.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes up {
+  0% {
+    transform: translateY(-10%);
+  }
+  25% {
+    transform: translateY(-20%);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-30%);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateY(-40%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-50%);
+    opacity: 0.4;
+  }
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(241, 52, 0);
+  outline: 1px solid rgb(245, 253, 1);
+}
+html {
+  font-size: 100%;
+} /*16px*/
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1,
+h2,
+h3,
+h4,
+.btn {
+  font-family: 'Fraunces', serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 894px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+i,
+.btn {
+  cursor: pointer;
+}
+//HEADER/nav-bar
+@import './scss/nav';
+//NAV CARD MOBILE
+.menu-bar {
+  align-items: center;
+  position: relative;
+}
+.nav-card {
+  position: absolute;
+  top: 2rem;
+  right: 0.5vmin;
+  background-color: $white;
+  padding: 2.5rem 2rem 2.5rem 2rem;
+  width: 85vw;
+  z-index: 11;
+  clip-path: polygon(
+    0 6%,
+    95% 6%,
+    100% 0,
+    100% 100%,
+    0% 100%
+  ); //<!--TODO: the first number X-axis and the second number Y-axis ...co-ordinate from the top left of polygone(0,0)
+  display: none;
+}
+.nav-card .nav__list {
+  display: block;
+}
+.nav-card .nav__list--wrapper {
+  padding-left: 0;
+  text-align: center;
+}
+.nav-card .btn-wrapper {
+  text-align: center;
+}
+/*BUTTONS*/
+.btn {
+  padding: 0.8rem 1.2rem;
+  border: transparent;
+  outline: 0;
+  transition: $transition;
+}
+.btn:active {
+  transform: scale(0.85);
+}
+.btn-contact {
+  background-color: $white;
+  color: $black;
+  border-radius: 20px;
+  text-transform: uppercase;
+
+  position: relative;
+  overflow: hidden;
+}
+.btn-contact:hover {
+  color: $white;
+}
+.btn-contact samp {
+  position: relative;
+  z-index: 1;
+  font-size: 0.8rem;
+  font-family: 'Fraunces', serif;
+}
+.btn-contact::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 230%;
+  width: 150%;
+  background-color: $btn_hover_color;
+  transition: 0.5s;
+  transform: translate(-98%, -25%) rotate(45deg); /*translate x and y*/
+}
+.btn-contact:hover::after {
+  transform: translate(-9%, -25%) rotate(45deg);
+}
+.nav-card .btn-contact {
+  background-color: $Yellow;
+}
+//btns in main section
+.btn-learn {
+  padding: 0.2rem 0.5rem;
+  border-radius: 15px;
+  z-index: 1;
+  background-color: transparent;
+  text-transform: uppercase;
+  position: relative !important;
+  overflow: hidden !important;
+}
+.btn-learn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 230%;
+  width: 100%;
+  background-color: $Yellow;
+  transition: 0.5s;
+  transform: translate(0%, 25%); /*translate x and y*/
+  opacity: 0.4;
+  z-index: -1;
+}
+.btn-learn:hover::after {
+  transform: translate(0%, 20%);
+  opacity: 1;
+}
+.btn-learn samp {
+  position: relative;
+  font-weight: 900;
+  font-family: 'Fraunces', serif;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+}
+.text-standout .btn-learn::after {
+  background-color: $Soft_red;
+}
+//MAIN SECTION
+@import './scss/mainSection';
+//TESTIMONIAL
+@import './scss/testimonials';
+//PRODUCTS
+.products-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.products-section__image {
+  max-height: 40vw !important; //the aspect ratio of images changes proportinal to its width
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 700px) {
+  .products-section {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .products-section__image {
+    max-height: 30vw !important;
+  }
+}
+//FOOTER
+.footer-section {
+  background-color: $btn_hover_color;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  padding: 3rem 0;
+  font-family: 'Barlow';
+  color: $Dark_moderate_cyan;
+  font-weight: 600;
+  gap: 1.5rem;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+.footer-links-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  a {
+    color: inherit;
+    transition: $transition;
+    &:hover {
+      color: $white;
+    }
+  }
+}
+.footer-links__link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+.footer-section__social__icons {
+  display: flex;
+  gap: 1.5rem;
+  a {
+    color: inherit;
+  }
+}
+.fa-brands {
+  font-size: 1.2rem;
+  transition: $transition;
+  &:hover {
+    color: $white;
+    transform: scale(1.1) rotate(360deg);
+  }
+}
+//JAVASCRIPT ADDED CLASSES
+.open {
+  display: block;
+  animation: pop 0.5s ease-in-out;
+}
+.loading-gif {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  z-index: 100;
+  text-align: center;
+  h1 {
+    position: relative;
+    top: 7rem;
+  }
+}
+/* fixed nav */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $Soft_red;
+  box-shadow: $shadow-3;
+  transition: all 0.5s;
+  z-index: 12;
+}
+
+.top-link {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 1.25rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 50%;
+
+  background: $Soft_red;
+  color: $Yellow;
+  border-color: green;
+
+  animation: up 3s ease-in-out infinite;
+  visibility: hidden;
+  z-index: -100;
+  cursor: pointer;
+}
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}

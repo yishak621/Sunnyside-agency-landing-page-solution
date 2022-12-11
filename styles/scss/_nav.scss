@@ -1,0 +1,117 @@
+@import '../scss/variables';
+header {
+  background-image: url('/images/mobile/image-header.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: $max-width;
+  max-height: 100vh !important;
+  background-position-y: 70%;
+  margin: 0 auto;
+}
+.fa-bars {
+  color: $white;
+  transition: $transition;
+  &:hover {
+    color: $Yellow;
+  }
+  &:active {
+    color: $Soft_red;
+    transform: scale(0.9);
+  }
+}
+//Nav bar
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vmin 3.5vmin;
+}
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.nav__list--wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.nav__list--link {
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  font-family: 'Barlow', sans-serif;
+
+  a {
+    font-weight: 600;
+    color: $Dark_grayish_blue;
+    transition: all 0.5s;
+  }
+}
+.nav__list--link:hover {
+  a {
+    color: $Yellow;
+  }
+}
+.nav-card .nav__list--link:hover {
+  a {
+    color: $Soft_red;
+  }
+}
+.hero-section {
+  width: 100vw;
+  height: 70vh;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: $max-width;
+  align-items: center;
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $White;
+    margin-top: 4rem;
+    max-width: 10ch;
+    position: relative;
+  }
+  img {
+    position: absolute;
+    top: 15rem;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  header {
+    background-image: url('/images/desktop/image-header.jpg');
+  }
+  .nav__list {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+  }
+
+  .nav__list--link {
+    a {
+      color: $white;
+    }
+  }
+  .nav__list--wrapper {
+    flex-direction: row;
+  }
+  .menu-bar {
+    display: none;
+  }
+  .hero-section {
+    margin-top: 2.5rem;
+    h1 {
+      max-width: none;
+      margin-top: 0;
+    }
+    img {
+      top: 15rem;
+    }
+  }
+}

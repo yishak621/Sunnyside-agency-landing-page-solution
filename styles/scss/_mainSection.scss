@@ -1,0 +1,145 @@
+@import '../scss/variables';
+//MAIN SECTION
+.main-section {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  max-width: $max-width;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+.main-section__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1.2fr;
+  min-height: 60vh;
+  overflow: hidden;
+  max-width: 450px;
+  margin: 0 auto;
+}
+.main-section__grid__text {
+  text-align: center;
+  padding: 1.75rem;
+  background-color: $White;
+  order: 1;
+}
+.main-section__grid__header {
+  margin: 1rem auto;
+  font-size: 1.8rem;
+  font-weight: 900;
+  max-width: 15ch;
+}
+.main-section__grid__image {
+  max-height: 400px !important;
+  order: 0;
+  picture {
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.main-section__grid__paragraph {
+  font-family: 'Barlow';
+  font-weight: 600;
+  color: $Dark_grayish_blue;
+  line-height: 1.4;
+}
+.main-section__grid__header {
+  text-transform: none;
+}
+//POSTER
+//trageting all childes
+.main-section__poster > * {
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 600px;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.main-section__poster {
+  grid-template-rows: 1fr 1fr;
+}
+.main-section__poster .main-section__grid__text {
+  background-color: transparent;
+  & > * {
+    color: $Dark_desaturated_cyan;
+  }
+}
+.main-section__poster__graphic {
+  background-image: url('/images/mobile/image-graphic-design.jpg');
+}
+.main-section__poster__photography {
+  background-image: url('/images/mobile/image-photography.jpg');
+}
+@media screen and (min-width: 700px) {
+  .main-section__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    min-height: 400px !important;
+    max-width: none;
+  }
+  .main-section__grid:nth-of-type(even) .main-section__grid__image {
+    order: 0;
+  }
+  .main-section__grid:nth-of-type(odd) .main-section__grid__image {
+    order: 1;
+  }
+
+  .main-section__grid__image {
+    order: 0;
+    picture {
+      img {
+        height: 130%;
+        object-fit: cover;
+      }
+    }
+  }
+  .main-section__grid__text {
+    text-align: left;
+    order: 1;
+    background-color: $White;
+    padding: 8rem;
+  }
+  .main-section__grid__header {
+    margin: 1.5rem 0;
+  }
+  .main-section__poster {
+    grid-template-rows: 1fr;
+  }
+  .main-section__poster .main-section__grid__text {
+    position: relative;
+    top: 6rem;
+    text-align: center;
+    h2 {
+      margin: 0 auto;
+    }
+    p {
+      padding: 0 1rem;
+    }
+  }
+  .main-section__poster__graphic {
+    background-image: url('/images/desktop/image-graphic-design-pc.jpg');
+  }
+  .main-section__poster__photography {
+    background-image: url('/images/desktop/image-photography-pc.jpg');
+  }
+}
+@media screen and (min-width: 700px) and(max-width:1134px) {
+  .main-section__grid__text {
+    padding: 3rem !important;
+  }
+  .main-section__poster .main-section__grid__text {
+    top: 3rem;
+
+    h2 {
+      margin: 0 auto;
+    }
+    p {
+      padding: 0;
+    }
+  }
+}
